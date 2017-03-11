@@ -348,6 +348,7 @@ port_init
 porta
 portc
 pow
+protocol_init
 ps0
 ps0_bit
 ps1

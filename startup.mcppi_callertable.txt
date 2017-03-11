@@ -1,10 +1,22 @@
 main
 	__CC2DW
 		____DoICP
-	InitTimer0
-	InitTimer1
-	ADC_Init
+	protocol_init
+		InitTimer0
+		InitTimer1
+		port_init
+		ADC_Init
 	port_init
 	ADC_Read
 		Delay_22us
+	word2double
+		NRM3232
+			RES032
+			SETFUN32
+			FIXSIGN32
+	Mul_32x32_FP
+		RES032
+		SETFOV32
+		SETFUN32
+	Compare_Double
 Interrupt
