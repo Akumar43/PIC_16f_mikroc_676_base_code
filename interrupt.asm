@@ -19,20 +19,20 @@ L_end_InitTimer0:
 _InitTimer1:
 
 ;interrupt.c,16 :: 		void InitTimer1(){
-;interrupt.c,17 :: 		T1CON	 = 0x01;
+;interrupt.c,17 :: 		T1CON         = 0x01;
 	MOVLW      1
 	MOVWF      T1CON+0
-;interrupt.c,18 :: 		TMR1IF_bit	 = 0;
+;interrupt.c,18 :: 		TMR1IF_bit         = 0;
 	BCF        TMR1IF_bit+0, BitPos(TMR1IF_bit+0)
-;interrupt.c,19 :: 		TMR1H	 = 0xFC;
+;interrupt.c,19 :: 		TMR1H         = 0xFC;
 	MOVLW      252
 	MOVWF      TMR1H+0
-;interrupt.c,20 :: 		TMR1L	 = 0x18;
+;interrupt.c,20 :: 		TMR1L         = 0x18;
 	MOVLW      24
 	MOVWF      TMR1L+0
-;interrupt.c,21 :: 		TMR1IE_bit	 = 1;
+;interrupt.c,21 :: 		TMR1IE_bit         = 1;
 	BSF        TMR1IE_bit+0, BitPos(TMR1IE_bit+0)
-;interrupt.c,22 :: 		INTCON	 = 0xC0;
+;interrupt.c,22 :: 		INTCON         = 0xC0;
 	MOVLW      192
 	MOVWF      INTCON+0
 ;interrupt.c,23 :: 		TMR1ON_bit =1;                             // need to be added in extra... doesnt generate from timer generator
@@ -60,8 +60,9 @@ _Interrupt:
 ;interrupt.c,31 :: 		TMR0                 = 6;
 	MOVLW      6
 	MOVWF      TMR0+0
-;interrupt.c,32 :: 		PORTC=~PORTC;
-	COMF       PORTC+0, 1
+;interrupt.c,32 :: 		PORTC.f0=~PORTC.f0;
+	MOVLW      1
+	XORWF      PORTC+0, 1
 ;interrupt.c,33 :: 		}
 L_Interrupt0:
 ;interrupt.c,35 :: 		if (TMR1IF_bit){
@@ -69,10 +70,10 @@ L_Interrupt0:
 	GOTO       L_Interrupt1
 ;interrupt.c,36 :: 		TMR1IF_bit = 0;
 	BCF        TMR1IF_bit+0, BitPos(TMR1IF_bit+0)
-;interrupt.c,37 :: 		TMR1H	 = 0xFC;
+;interrupt.c,37 :: 		TMR1H         = 0xFC;
 	MOVLW      252
 	MOVWF      TMR1H+0
-;interrupt.c,38 :: 		TMR1L	 = 0x18;
+;interrupt.c,38 :: 		TMR1L         = 0x18;
 	MOVLW      24
 	MOVWF      TMR1L+0
 ;interrupt.c,39 :: 		i=i++;
@@ -93,8 +94,8 @@ L_Interrupt0:
 L__Interrupt13:
 	BTFSC      STATUS+0, 0
 	GOTO       L_Interrupt2
-;interrupt.c,41 :: 		PORTA |= 1 << 2;  //setting a bit
-	BSF        PORTA+0, 2
+;interrupt.c,41 :: 		PORTC |= 1 << 5;  //setting a bit
+	BSF        PORTC+0, 5
 	GOTO       L_Interrupt3
 L_Interrupt2:
 ;interrupt.c,43 :: 		else if((i>=pulse_width) && (i< 255))
@@ -124,8 +125,8 @@ L__Interrupt15:
 	BTFSC      STATUS+0, 0
 	GOTO       L_Interrupt6
 L__Interrupt8:
-;interrupt.c,44 :: 		PORTA &= ~(1 << 2);
-	BCF        PORTA+0, 2
+;interrupt.c,44 :: 		PORTC &= ~(1 << 5);
+	BCF        PORTC+0, 5
 	GOTO       L_Interrupt7
 L_Interrupt6:
 ;interrupt.c,47 :: 		i=0;

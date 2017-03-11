@@ -14,12 +14,12 @@ void InitTimer0(){
 
 //Place/Copy this part in declaration section
 void InitTimer1(){
-  T1CON	 = 0x01;
-  TMR1IF_bit	 = 0;
-  TMR1H	 = 0xFC;
-  TMR1L	 = 0x18;
-  TMR1IE_bit	 = 1;
-  INTCON	 = 0xC0;
+  T1CON         = 0x01;
+  TMR1IF_bit         = 0;
+  TMR1H         = 0xFC;
+  TMR1L         = 0x18;
+  TMR1IE_bit         = 1;
+  INTCON         = 0xC0;
   TMR1ON_bit =1;                             // need to be added in extra... doesnt generate from timer generator
 }
 
@@ -29,19 +29,19 @@ void Interrupt(){
   if (TMR0IF_bit){
     TMR0IF_bit         = 0;
     TMR0                 = 6;
-    PORTC=~PORTC;
+    PORTC.f0=~PORTC.f0;
   }
 
     if (TMR1IF_bit){
     TMR1IF_bit = 0;
-    TMR1H	 = 0xFC;
-    TMR1L	 = 0x18;
+    TMR1H         = 0xFC;
+    TMR1L         = 0x18;
     i=i++;
     if(i<pulse_width)
-        PORTA |= 1 << 2;  //setting a bit
+        PORTC |= 1 << 5;  //setting a bit
         
     else if((i>=pulse_width) && (i< 255))
-        PORTA &= ~(1 << 2);
+       PORTC &= ~(1 << 5);
         
     else
         i=0;

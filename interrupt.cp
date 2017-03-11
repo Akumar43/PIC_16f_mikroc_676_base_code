@@ -1,4 +1,4 @@
-#line 1 "E:/startup_codes/pic16f676/interrupt.c"
+#line 1 "E:/startup_codes/pic16f676/PIC_16f_mikroc_676_base_code_0.0/interrupt.c"
 int i=0;
 int pulse_width =75;
 
@@ -30,7 +30,7 @@ void Interrupt(){
  if (TMR0IF_bit){
  TMR0IF_bit = 0;
  TMR0 = 6;
- PORTC=~PORTC;
+ PORTC.f0=~PORTC.f0;
  }
 
  if (TMR1IF_bit){
@@ -39,10 +39,10 @@ void Interrupt(){
  TMR1L = 0x18;
  i=i++;
  if(i<pulse_width)
- PORTA |= 1 << 2;
+ PORTC |= 1 << 5;
 
  else if((i>=pulse_width) && (i< 255))
- PORTA &= ~(1 << 2);
+ PORTC &= ~(1 << 5);
 
  else
  i=0;

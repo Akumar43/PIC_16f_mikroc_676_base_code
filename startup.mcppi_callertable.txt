@@ -1,8 +1,10 @@
 main
+	__CC2DW
+		____DoICP
 	InitTimer0
 	InitTimer1
-	port_init
 	ADC_Init
+	port_init
 	ADC_Read
 		Delay_22us
 Interrupt
