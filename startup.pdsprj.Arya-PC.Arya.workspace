@@ -33,7 +33,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="695" x="1115" flags="00008001" y="306" h="448" pid="0" iid="4">
+   <POPUP w="695" x="149" flags="00008001" y="109" h="448" pid="0" iid="4">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="52" x="126" flags="00000008" y="187" h="10" pid="3" iid="1">

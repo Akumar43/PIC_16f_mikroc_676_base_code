@@ -1,4 +1,4 @@
-#line 1 "E:/startup_codes/pic16f676/interrupt.c"
+#line 1 "E:/startup_codes/pic16f676/PIC_16f_mikroc_676_base_code_0.0/interrupt.c"
 int i=0;
 int pulse_width =75;
 
