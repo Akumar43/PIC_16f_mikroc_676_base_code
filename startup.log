@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 0	1	mikroCPIC1618.exe -MSF -DBG -pP16F676 -DL -O11111114 -fo4 -N"E:\startup_codes\pic16f676\PIC_16f_mikroc_676_base_code_0.0\startup.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"E:\startup_codes\pic16f676\PIC_16f_mikroc_676_base_code_0.0\" -SP"E:\startup_codes\pic16f676\Snapshot_repository\PIC_16f_mikroc_676_base_code_0.0\" -SP"E:\startup_codes\pic16f676\" -SP"E:\Wireless_proto\mikroc_code\" -IP"E:\Wireless_proto\mikroc_code\" -IP"E:\startup_codes\pic16f676\" -IP"E:\startup_codes\pic16f676\PIC_16f_mikroc_676_base_code_0.0\" -IP"E:\startup_codes\pic16f676\Snapshot_repository\PIC_16f_mikroc_676_base_code_0.0\" "main.c" "interrupt.c" "board.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_CString.mcl" "__Lib_CStdlib.mcl" "__Lib_CMath.mcl" "__Lib_MemManager.mcl" "__Lib_Conversions.mcl" "__Lib_Sprinti.mcl" "__Lib_Sprintl.mcl" "__Lib_Time.mcl" "__Lib_Trigonometry.mcl" "__Lib_Button.mcl" "__Lib_Manchester.mcl" "__Lib_OneWire.mcl" "__Lib_PS2.mcl" "__Lib_Sound.mcl" "__Lib_SoftI2C.mcl" "__Lib_SoftSPI.mcl" "__Lib_SoftUART.mcl" "__Lib_ADC_A_B.mcl" "__Lib_EEPROM.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+=======
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F676 -DL -O11111114 -fo4 -N"E:\startup_codes\pic16f676\PIC_16f_mikroc_676_base_code_0.0\startup.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"E:\startup_codes\pic16f676\PIC_16f_mikroc_676_base_code_0.0\" -SP"E:\startup_codes\pic16f676\" -SP"E:\Wireless_proto\mikroc_code\" -IP"E:\Wireless_proto\mikroc_code\" -IP"E:\startup_codes\pic16f676\" -IP"E:\startup_codes\pic16f676\PIC_16f_mikroc_676_base_code_0.0\" "main.c" "interrupt.c" "board.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_CString.mcl" "__Lib_CStdlib.mcl" "__Lib_CMath.mcl" "__Lib_MemManager.mcl" "__Lib_Conversions.mcl" "__Lib_Sprinti.mcl" "__Lib_Sprintl.mcl" "__Lib_Time.mcl" "__Lib_Trigonometry.mcl" "__Lib_Button.mcl" "__Lib_Manchester.mcl" "__Lib_OneWire.mcl" "__Lib_PS2.mcl" "__Lib_Sound.mcl" "__Lib_SoftI2C.mcl" "__Lib_SoftSPI.mcl" "__Lib_SoftUART.mcl" "__Lib_ADC_A_B.mcl" "__Lib_EEPROM.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+>>>>>>> origin/master
 hint: 0	1139	Available RAM: 48 [bytes], Available ROM: 1024 [bytes]	 
 diagnostics: 0	122	Compilation Started	interrupt.h
 diagnostics: 49	123	Compiled Successfully	main.c
@@ -6,6 +10,7 @@ diagnostics: 0	122	Compilation Started	interrupt.c
 diagnostics: 50	123	Compiled Successfully	interrupt.c
 diagnostics: 0	122	Compilation Started	board.h
 diagnostics: 10	123	Compiled Successfully	board.c
+<<<<<<< HEAD
 diagnostics: 0	127	All files Compiled in 671 ms	 
 hint: 0	1144	Used RAM (bytes): 15 (31%)  Free RAM (bytes): 33 (69%)	Used RAM (bytes): 15 (31%)  Free RAM (bytes): 33 (69%)
 hint: 0	1144	Used ROM (program words): 266 (26%)  Free ROM (program words): 758 (74%)	Used ROM (program words): 266 (26%)  Free ROM (program words): 758 (74%)
@@ -13,3 +18,12 @@ diagnostics: 0	125	Project Linked Successfully	startup.mcppi
 diagnostics: 0	128	Linked in 218 ms	 
 diagnostics: 0	129	Project 'startup.mcppi' completed: 1060 ms	 
 diagnostics: 0	103	Finished successfully: 11 Mar 2017, 12:11:52	startup.mcppi
+=======
+diagnostics: 0	127	All files Compiled in 499 ms	 
+hint: 0	1144	Used RAM (bytes): 15 (31%)  Free RAM (bytes): 33 (69%)	Used RAM (bytes): 15 (31%)  Free RAM (bytes): 33 (69%)
+hint: 0	1144	Used ROM (program words): 265 (26%)  Free ROM (program words): 759 (74%)	Used ROM (program words): 265 (26%)  Free ROM (program words): 759 (74%)
+diagnostics: 0	125	Project Linked Successfully	startup.mcppi
+diagnostics: 0	128	Linked in 203 ms	 
+diagnostics: 0	129	Project 'startup.mcppi' completed: 905 ms	 
+diagnostics: 0	103	Finished successfully: 11 Mar 2017, 11:11:50	startup.mcppi
+>>>>>>> origin/master
